@@ -1,3 +1,7 @@
+Personal fork of prezto, edited runcoms and separate alias file.
+Original README below.
+
+==============================
 Prezto — Instantly Awesome Zsh
 ==============================
 
