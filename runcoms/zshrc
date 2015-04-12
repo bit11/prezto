@@ -11,3 +11,10 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/aliases.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprezto/aliases.zsh"
+fi
+
+# Load base16 colours
+BASE16_SHELL="$HOME/dotfiles/colours/base16-atelierlakeside.light.sh"
+[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL

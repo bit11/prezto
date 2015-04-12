@@ -17,8 +17,8 @@ fi
 # Editors
 #
 
-export EDITOR='nano'
-export VISUAL='nano'
+export EDITOR='vim'
+export VISUAL='vim'
 export PAGER='less'
 
 #
@@ -44,6 +44,7 @@ typeset -gU cdpath fpath mailpath path
 # Set the list of directories that Zsh searches for programs.
 path=(
   /usr/local/{bin,sbin}
+  $HOME/bin
   $path
 )
 
@@ -72,3 +73,29 @@ if [[ ! -d "$TMPDIR" ]]; then
 fi
 
 TMPPREFIX="${TMPDIR%/}/zsh"
+if [[ ! -d "$TMPPREFIX" ]]; then
+  mkdir -p "$TMPPREFIX"
+fi
+
+[[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx
+
+# New environment setting added by STAR-CCM+9.02.005 on Wed Mar 11 16:36:40 GMT 2015 1.
+# The unmodified version of this file is saved in /home/bit11/.zprofile2104443105.
+# Do NOT modify these lines; they are used to uninstall.
+PATH="/home/bit11/starccm/STAR-CCM+9.02.005/star/bin:${PATH}"
+export PATH
+# End comments by InstallAnywhere on Wed Mar 11 16:36:40 GMT 2015 1.
+
+# New environment setting added by STAR-CCM+9.02.005 on Wed Mar 11 16:36:46 GMT 2015 4.
+# The unmodified version of this file is saved in /home/bit11/.zprofile2104443105.
+# Do NOT modify these lines; they are used to uninstall.
+CDLMD_LICENSE_FILE=1999@iclic17.cc.ic.ac.uk:1999@iclic17.cc.ic.ac.uk:1999@iclic17.cc.ic.ac.uk
+export CDLMD_LICENSE_FILE
+# End comments by InstallAnywhere on Wed Mar 11 16:36:46 GMT 2015 4.
+
+# New environment setting added by STAR-CCM+9.02.005 on Wed Mar 11 16:50:53 GMT 2015 7.
+# The unmodified version of this file is saved in /home/bit11/.zprofile2104443105.
+# Do NOT modify these lines; they are used to uninstall.
+PATH="/home/bit11/starccm/STAR-View+9.02.005:${PATH}"
+export PATH
+# End comments by InstallAnywhere on Wed Mar 11 16:50:53 GMT 2015 7.
